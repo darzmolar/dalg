@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module grafos12</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>grafos12</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/alex/Desktop/DALG/git/grafos12.py">/home/alex/Desktop/DALG/git/grafos12.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;Wed&nbsp;Oct&nbsp;19&nbsp;15:48:00&nbsp;2018<br>
+&nbsp;<br>
+@author:&nbsp;Daniel&nbsp;Cuesta,&nbsp;Alejandro&nbsp;Garo</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+<a href="networkx.html">networkx</a><br>
+</td><td width="25%" valign=top><a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+<a href="queue.html">queue</a><br>
+</td><td width="25%" valign=top><a href="random.html">random</a><br>
+<a href="string.html">string</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+<a href="time.html">time</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-TGF_2_d_g"><strong>TGF_2_d_g</strong></a>(f_name)</dt><dd><tt>Genera&nbsp;un&nbsp;diccionario&nbsp;de&nbsp;listas&nbsp;de&nbsp;adyacencia&nbsp;a&nbsp;partir&nbsp;de&nbsp;un&nbsp;fichero.<br>
+Devuelve&nbsp;el&nbsp;diccionario.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+f_name&nbsp;:&nbsp;fichero&nbsp;donde&nbsp;leer</tt></dd></dl>
+ <dl><dt><a name="-check_sparse_factor"><strong>check_sparse_factor</strong></a>(n_grafos, n_nodes, sparse_factor)</dt><dd><tt>Genera&nbsp;las&nbsp;matrices&nbsp;de&nbsp;varios&nbsp;grafos&nbsp;aleatorios&nbsp;y&nbsp;sus&nbsp;proporciones.<br>
+Devuelve&nbsp;la&nbsp;media&nbsp;de&nbsp;las&nbsp;proporciones.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+n_grafos&nbsp;:&nbsp;numero&nbsp;de&nbsp;grafos<br>
+n_nodes&nbsp;:&nbsp;numero&nbsp;de&nbsp;nodos<br>
+sparse_factor&nbsp;:&nbsp;proporcion&nbsp;de&nbsp;ramas</tt></dd></dl>
+ <dl><dt><a name="-cuenta_ramas"><strong>cuenta_ramas</strong></a>(m_g)</dt><dd><tt>Cuenta&nbsp;el&nbsp;numero&nbsp;de&nbsp;ramas&nbsp;que&nbsp;hay&nbsp;en&nbsp;la&nbsp;matriz&nbsp;de&nbsp;adyacencia.<br>
+Devuelve&nbsp;el&nbsp;numero&nbsp;de&nbsp;ramas.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+m_g&nbsp;:&nbsp;matriz&nbsp;de&nbsp;adyacencia</tt></dd></dl>
+ <dl><dt><a name="-d_g_2_TGF"><strong>d_g_2_TGF</strong></a>(d_g, f_name)</dt><dd><tt>Guarda&nbsp;el&nbsp;grafo&nbsp;definido&nbsp;por&nbsp;el&nbsp;diccionario&nbsp;en&nbsp;un&nbsp;fichero.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+d_g&nbsp;:&nbsp;diccionario&nbsp;de&nbsp;listas&nbsp;de&nbsp;adyacencia<br>
+f_name&nbsp;:&nbsp;fichero&nbsp;donde&nbsp;guardar</tt></dd></dl>
+ <dl><dt><a name="-d_g_2_m_g"><strong>d_g_2_m_g</strong></a>(d_g)</dt><dd><tt>Genera&nbsp;una&nbsp;matriz&nbsp;de&nbsp;adyacencia&nbsp;del&nbsp;grafo&nbsp;definido&nbsp;por&nbsp;el&nbsp;diccionario.<br>
+Devuelve&nbsp;la&nbsp;matriz.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+d_g&nbsp;:&nbsp;diccionario&nbsp;de&nbsp;listas&nbsp;de&nbsp;adyacencia</tt></dd></dl>
+ <dl><dt><a name="-d_g_2_nx_g"><strong>d_g_2_nx_g</strong></a>(d_g)</dt><dd><tt>Dado&nbsp;un&nbsp;grafo,&nbsp;lo&nbsp;transforma&nbsp;a&nbsp;uno&nbsp;de&nbsp;la&nbsp;librería&nbsp;NX.<br>
+Busca&nbsp;los&nbsp;caminos&nbsp;entre&nbsp;nodos&nbsp;y&nbsp;su&nbsp;peso,&nbsp;crea&nbsp;una&nbsp;lista&nbsp;con&nbsp;todos&nbsp;ellos&nbsp;y&nbsp;usa&nbsp;el&nbsp;método&nbsp;<br>
+nx.add_weighted_edges_from&nbsp;para&nbsp;crear&nbsp;el&nbsp;grafo&nbsp;NX.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+d_g&nbsp;:&nbsp;grafo&nbsp;dirigido</tt></dd></dl>
+ <dl><dt><a name="-dijkstra_d"><strong>dijkstra_d</strong></a>(d_g, u)</dt><dd><tt>Genera&nbsp;las&nbsp;tablas&nbsp;de&nbsp;previos&nbsp;y&nbsp;de&nbsp;distancias&nbsp;minimas&nbsp;entre&nbsp;<br>
+el&nbsp;vertice&nbsp;y&nbsp;los&nbsp;demas&nbsp;de&nbsp;un&nbsp;grafo&nbsp;dado&nbsp;por&nbsp;un&nbsp;diccionario.<br>
+Devuelve&nbsp;las&nbsp;tablas&nbsp;de&nbsp;previos&nbsp;y&nbsp;de&nbsp;distancias&nbsp;minimas.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+d_g&nbsp;:&nbsp;diccionario&nbsp;de&nbsp;listas&nbsp;de&nbsp;adyacencia<br>
+u&nbsp;:&nbsp;vertice</tt></dd></dl>
+ <dl><dt><a name="-fit_plot"><strong>fit_plot</strong></a>(l, func_2_fit, size_ini, size_fin, step)</dt></dl>
+ <dl><dt><a name="-m_g_2_d_g"><strong>m_g_2_d_g</strong></a>(m_g)</dt><dd><tt>Genera&nbsp;un&nbsp;diccionario&nbsp;de&nbsp;listas&nbsp;de&nbsp;adyacencia&nbsp;del&nbsp;grafo&nbsp;definido&nbsp;por&nbsp;la&nbsp;matriz.<br>
+Devuelve&nbsp;el&nbsp;diccionario.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+m_g&nbsp;:&nbsp;matriz&nbsp;de&nbsp;adyacencia</tt></dd></dl>
+ <dl><dt><a name="-min_paths"><strong>min_paths</strong></a>(d_prev)</dt><dd><tt>Genera&nbsp;los&nbsp;caminos&nbsp;minimos&nbsp;desde&nbsp;un&nbsp;vertice&nbsp;a&nbsp;los&nbsp;demas&nbsp;<br>
+vertices&nbsp;del&nbsp;grafo.<br>
+Devuelve&nbsp;un&nbsp;diccionario&nbsp;con&nbsp;los&nbsp;caminos&nbsp;entre&nbsp;vertices.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+d_prev&nbsp;:&nbsp;diccionario&nbsp;de&nbsp;previos</tt></dd></dl>
+ <dl><dt><a name="-n2_log_n"><strong>n2_log_n</strong></a>(n)</dt></dl>
+ <dl><dt><a name="-nx_g_2_d_g"><strong>nx_g_2_d_g</strong></a>(nx_g)</dt><dd><tt>Dado&nbsp;un&nbsp;grafo&nbsp;de&nbsp;la&nbsp;librería&nbsp;NX,&nbsp;lo&nbsp;transforma&nbsp;a&nbsp;uno&nbsp;con&nbsp;nuestro&nbsp;formato.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+nx_g&nbsp;:&nbsp;grafo&nbsp;dirigido&nbsp;NX</tt></dd></dl>
+ <dl><dt><a name="-print_d_g"><strong>print_d_g</strong></a>(d_g)</dt><dd><tt>&nbsp;&nbsp;&nbsp;&nbsp;Imprime&nbsp;por&nbsp;pantalla&nbsp;un&nbsp;grafo&nbsp;guardado&nbsp;en&nbsp;forma&nbsp;de&nbsp;diccionario.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parámetros<br>
+----------<br>
+m_g&nbsp;:&nbsp;Grafo&nbsp;en&nbsp;forma&nbsp;de&nbsp;diccionario</tt></dd></dl>
+ <dl><dt><a name="-print_m_g"><strong>print_m_g</strong></a>(m_g)</dt><dd><tt>Imprime&nbsp;por&nbsp;pantalla&nbsp;un&nbsp;grafo&nbsp;guardado&nbsp;en&nbsp;forma&nbsp;de&nbsp;matriz.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+m_g&nbsp;:&nbsp;Grafo&nbsp;en&nbsp;forma&nbsp;de&nbsp;matriz</tt></dd></dl>
+ <dl><dt><a name="-rand_matr_pos_graph"><strong>rand_matr_pos_graph</strong></a>(n_nodes, sparse_factor, max_weight=50.0, decimals=0)</dt><dd><tt>Genera&nbsp;una&nbsp;matriz&nbsp;de&nbsp;adyacencia&nbsp;a&nbsp;partir&nbsp;de&nbsp;un&nbsp;grafo&nbsp;dirigido&nbsp;ponderado.<br>
+Devuelve&nbsp;la&nbsp;matriz&nbsp;de&nbsp;adyacencia.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+n_nodes&nbsp;:&nbsp;numero&nbsp;de&nbsp;nodos<br>
+sparse_factor&nbsp;:&nbsp;proporcion&nbsp;de&nbsp;ramas<br>
+max_weight&nbsp;:&nbsp;peso&nbsp;maximo</tt></dd></dl>
+ <dl><dt><a name="-read_object"><strong>read_object</strong></a>(f_name, save_path='.')</dt><dd><tt>Devuelve&nbsp;un&nbsp;objeto&nbsp;Python&nbsp;guardado&nbsp;en&nbsp;un&nbsp;fichero.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+f_name&nbsp;:&nbsp;fichero&nbsp;donde&nbsp;leer<br>
+save_path&nbsp;:&nbsp;direccion&nbsp;donde&nbsp;guardar</tt></dd></dl>
+ <dl><dt><a name="-save_object"><strong>save_object</strong></a>(obj, f_name='obj.pklz', save_path='.')</dt><dd><tt>Guarda&nbsp;un&nbsp;objeto&nbsp;Python&nbsp;de&nbsp;manera&nbsp;comprimida&nbsp;en&nbsp;un&nbsp;fichero.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+obj&nbsp;:&nbsp;objeto&nbsp;python<br>
+f_name&nbsp;:&nbsp;fichero&nbsp;donde&nbsp;guardar<br>
+save_path&nbsp;:&nbsp;direccion&nbsp;donde&nbsp;guardar</tt></dd></dl>
+ <dl><dt><a name="-time_dijkstra_d"><strong>time_dijkstra_d</strong></a>(n_graphs, n_nodes_ini, n_nodes_fin, step, sparse_factor=0.25)</dt><dd><tt>Mide&nbsp;los&nbsp;tiempos&nbsp;que&nbsp;tarda&nbsp;en&nbsp;ejecutar&nbsp;el&nbsp;algoritmo&nbsp;de&nbsp;Dijkstra<br>
+sobre&nbsp;diferentes&nbsp;grafos&nbsp;con&nbsp;diferentes&nbsp;cantidades&nbsp;de&nbsp;nodos&nbsp;dados&nbsp;en&nbsp;diccionarios.<br>
+Devuelve&nbsp;los&nbsp;tiempos.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+n_graphs&nbsp;:&nbsp;numero&nbsp;de&nbsp;grafos<br>
+n_nodes_ini&nbsp;:&nbsp;tamaño&nbsp;de&nbsp;inicio<br>
+n_nodes_fin&nbsp;:&nbsp;tamaño&nbsp;de&nbsp;fin<br>
+step&nbsp;:&nbsp;incremento<br>
+sparse_factor&nbsp;:&nbsp;proporcion&nbsp;de&nbsp;ramas</tt></dd></dl>
+ <dl><dt><a name="-time_dijkstra_m"><strong>time_dijkstra_m</strong></a>(n_graphs, n_nodes_ini, n_nodes_fin, step, sparse_factor=0.25)</dt><dd><tt>Mide&nbsp;los&nbsp;tiempos&nbsp;que&nbsp;tarda&nbsp;en&nbsp;ejecutar&nbsp;el&nbsp;algoritmo&nbsp;de&nbsp;Dijkstra<br>
+sobre&nbsp;diferentes&nbsp;grafos&nbsp;con&nbsp;diferentes&nbsp;cantidades&nbsp;de&nbsp;nodos&nbsp;dados&nbsp;en&nbsp;<br>
+matrices.<br>
+Devuelve&nbsp;los&nbsp;tiempos.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+n_graphs&nbsp;:&nbsp;numero&nbsp;de&nbsp;grafos<br>
+n_nodes_ini&nbsp;:&nbsp;tamaño&nbsp;de&nbsp;inicio<br>
+n_nodes_fin&nbsp;:&nbsp;tamaño&nbsp;de&nbsp;fin<br>
+step&nbsp;:&nbsp;incremento<br>
+sparse_factor&nbsp;:&nbsp;proporcion&nbsp;de&nbsp;ramas</tt></dd></dl>
+ <dl><dt><a name="-time_dijkstra_nx"><strong>time_dijkstra_nx</strong></a>(n_graphs, n_nodes_ini, n_nodes_fin, step, sparse_factor=0.25)</dt><dd><tt>Mide&nbsp;los&nbsp;tiempos&nbsp;que&nbsp;tarda&nbsp;en&nbsp;ejecutar&nbsp;el&nbsp;algoritmo&nbsp;de&nbsp;Dijkstra<br>
+sobre&nbsp;diferentes&nbsp;grafos&nbsp;con&nbsp;diferentes&nbsp;cantidades&nbsp;de&nbsp;nodos&nbsp;dados&nbsp;en&nbsp;grafos&nbsp;NX.<br>
+Devuelve&nbsp;una&nbsp;lista&nbsp;con&nbsp;los&nbsp;tiempos&nbsp;para&nbsp;cada&nbsp;ejecucion&nbsp;del&nbsp;algoritmo&nbsp;de&nbsp;Dijkstra.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+n_graphs&nbsp;:&nbsp;numero&nbsp;de&nbsp;grafos<br>
+n_nodes_ini&nbsp;:&nbsp;tamaño&nbsp;de&nbsp;inicio<br>
+n_nodes_fin&nbsp;:&nbsp;tamaño&nbsp;de&nbsp;fin<br>
+step&nbsp;:&nbsp;incremento<br>
+sparse_factor&nbsp;:&nbsp;proporcion&nbsp;de&nbsp;ramas</tt></dd></dl>
+</td></tr></table>
+</body></html>
