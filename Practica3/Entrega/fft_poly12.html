@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module fft_poly12</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>fft_poly12</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/alex/Desktop/DALG/Practica_3/fft_poly12.py">/home/alex/Desktop/DALG/Practica_3/fft_poly12.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;Wed&nbsp;Oct&nbsp;19&nbsp;15:48:00&nbsp;2018<br>
+&nbsp;<br>
+@author:&nbsp;Daniel&nbsp;Cuesta,&nbsp;Alejandro&nbsp;Garo</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="cmath.html">cmath</a><br>
+<a href="math.html">math</a><br>
+</td><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+<a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+</td><td width="25%" valign=top><a href="random.html">random</a><br>
+<a href="string.html">string</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+<a href="time.html">time</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-exp"><strong>exp</strong></a>(z, /)</dt><dd><tt>Return&nbsp;the&nbsp;exponential&nbsp;value&nbsp;e**z.</tt></dd></dl>
+ <dl><dt><a name="-fft"><strong>fft</strong></a>(t)</dt><dd><tt>Algoritmo&nbsp;para&nbsp;el&nbsp;cálculo&nbsp;de&nbsp;la&nbsp;transformada&nbsp;rápida&nbsp;de&nbsp;Fourier<br>
+sobre&nbsp;un&nbsp;array.&nbsp;Calcula&nbsp;también&nbsp;la&nbsp;menor&nbsp;potencia&nbsp;de&nbsp;t&nbsp;que&nbsp;es&nbsp;<br>
+mayor&nbsp;que&nbsp;el&nbsp;número&nbsp;de&nbsp;elementos&nbsp;de&nbsp;la&nbsp;tabla,&nbsp;añadiéndole&nbsp;un<br>
+número&nbsp;adecuado&nbsp;de&nbsp;0s.<br>
+Devuelve&nbsp;un&nbsp;array&nbsp;numpy&nbsp;de&nbsp;números&nbsp;complejos<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+t:&nbsp;array&nbsp;sobre&nbsp;el&nbsp;cual&nbsp;se&nbsp;calcula&nbsp;la&nbsp;FFT.</tt></dd></dl>
+ <dl><dt><a name="-invert_fft"><strong>invert_fft</strong></a>(t, fft_func=&lt;function fft at 0x7f8bc629cea0&gt;)</dt><dd><tt>Algoritmo&nbsp;para&nbsp;el&nbsp;cálculo&nbsp;de&nbsp;la&nbsp;transformada&nbsp;rápida&nbsp;inversa&nbsp;de&nbsp;Fourier<br>
+sobre&nbsp;un&nbsp;array.&nbsp;Calcula&nbsp;también&nbsp;la&nbsp;menor&nbsp;potencia&nbsp;de&nbsp;t&nbsp;que&nbsp;es&nbsp;<br>
+mayor&nbsp;que&nbsp;el&nbsp;número&nbsp;de&nbsp;elementos&nbsp;de&nbsp;la&nbsp;tabla,&nbsp;añadiéndole&nbsp;un<br>
+número&nbsp;adecuado&nbsp;de&nbsp;0s.<br>
+Devuelve&nbsp;un&nbsp;array&nbsp;numpy&nbsp;de&nbsp;números&nbsp;complejos<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+t:&nbsp;array&nbsp;sobre&nbsp;el&nbsp;cual&nbsp;se&nbsp;calcula&nbsp;la&nbsp;IFFT.</tt></dd></dl>
+ <dl><dt><a name="-mult_numeros"><strong>mult_numeros</strong></a>(num1, num2)</dt><dd><tt>Multiplica&nbsp;dos&nbsp;números&nbsp;llevándolos&nbsp;a&nbsp;sus&nbsp;polinomios&nbsp;correspondientes,<br>
+multiplicando&nbsp;dichos&nbsp;polinomios&nbsp;usando&nbsp;la&nbsp;función&nbsp;mult_polinomios<br>
+y&nbsp;calculando&nbsp;el&nbsp;número&nbsp;que&nbsp;le&nbsp;corresponde<br>
+Base&nbsp;supuesta&nbsp;=&nbsp;10<br>
+Retorna&nbsp;el&nbsp;número&nbsp;resultado&nbsp;del&nbsp;producto&nbsp;de&nbsp;num1*num2<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+num1:&nbsp;número&nbsp;1<br>
+num2:&nbsp;número&nbsp;2</tt></dd></dl>
+ <dl><dt><a name="-mult_numeros_fft"><strong>mult_numeros_fft</strong></a>(num1, num2, fft_func=&lt;function fft at 0x7f8bc629cea0&gt;)</dt><dd><tt>Multiplica&nbsp;dos&nbsp;números&nbsp;llevándolos&nbsp;a&nbsp;sus&nbsp;polinomios&nbsp;correspondientes,<br>
+multiplicando&nbsp;dichos&nbsp;polinomios&nbsp;usando&nbsp;la&nbsp;función&nbsp;mult_polinomios_fft<br>
+y&nbsp;calculando&nbsp;el&nbsp;número&nbsp;que&nbsp;le&nbsp;corresponde<br>
+Base&nbsp;supuesta&nbsp;=&nbsp;10<br>
+Retorna&nbsp;el&nbsp;número&nbsp;resultado&nbsp;del&nbsp;producto&nbsp;de&nbsp;num1*num2<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+num1:&nbsp;número&nbsp;1<br>
+num2:&nbsp;número&nbsp;2</tt></dd></dl>
+ <dl><dt><a name="-mult_polinomios"><strong>mult_polinomios</strong></a>(l_pol_1, l_pol_2)</dt><dd><tt>Multiplica&nbsp;dos&nbsp;polinomios&nbsp;segun&nbsp;el&nbsp;metodo&nbsp;tradicional.&nbsp;Los<br>
+coeficientes&nbsp;vienen&nbsp;dados&nbsp;por&nbsp;las&nbsp;listas&nbsp;pasadas&nbsp;por&nbsp;parámetro.<br>
+Devuelve&nbsp;una&nbsp;lista&nbsp;de&nbsp;enteros&nbsp;con&nbsp;la&nbsp;multiplicación&nbsp;de&nbsp;polinomios,<br>
+cuyos&nbsp;coeficientes&nbsp;están&nbsp;ordenados&nbsp;de&nbsp;menor&nbsp;a&nbsp;mayor&nbsp;grado.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+l_pol_1:&nbsp;lista&nbsp;polinómica&nbsp;1<br>
+l_pol_2:&nbsp;lista&nbsp;polinómica&nbsp;2</tt></dd></dl>
+ <dl><dt><a name="-mult_polinomios_fft"><strong>mult_polinomios_fft</strong></a>(l_pol_1, l_pol_2, fft_func=&lt;function fft at 0x7f8bc629cea0&gt;)</dt><dd><tt>Multiplica&nbsp;dos&nbsp;polinomios&nbsp;usando&nbsp;la&nbsp;FFT.&nbsp;Los<br>
+coeficientes&nbsp;vienen&nbsp;dados&nbsp;por&nbsp;las&nbsp;listas&nbsp;pasadas&nbsp;por&nbsp;parámetro.<br>
+Devuelve&nbsp;una&nbsp;lista&nbsp;de&nbsp;enteros&nbsp;con&nbsp;la&nbsp;multiplicación&nbsp;de&nbsp;polinomios,<br>
+cuyos&nbsp;coeficientes&nbsp;están&nbsp;ordenados&nbsp;de&nbsp;menor&nbsp;a&nbsp;mayor&nbsp;grado.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+l_pol_1:&nbsp;lista&nbsp;polinómica&nbsp;1<br>
+l_pol_2:&nbsp;lista&nbsp;polinómica&nbsp;2</tt></dd></dl>
+ <dl><dt><a name="-num_2_pol"><strong>num_2_pol</strong></a>(num, base=10)</dt><dd><tt>Convierte&nbsp;un&nbsp;número&nbsp;en&nbsp;su&nbsp;polinomio&nbsp;teniendo&nbsp;en&nbsp;cuenta&nbsp;la&nbsp;base<br>
+introducida.<br>
+Retorna&nbsp;una&nbsp;lista&nbsp;de&nbsp;enteros&nbsp;con&nbsp;los&nbsp;coeficientes&nbsp;ordenados&nbsp;de&nbsp;<br>
+menor&nbsp;a&nbsp;mayor&nbsp;grado.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+num:&nbsp;número&nbsp;a&nbsp;transformar<br>
+base:&nbsp;base&nbsp;deseada</tt></dd></dl>
+ <dl><dt><a name="-poli_2_num"><strong>poli_2_num</strong></a>(l_pol, base=10)</dt><dd><tt>Calcula&nbsp;el&nbsp;valor&nbsp;del&nbsp;polinomio&nbsp;para&nbsp;la&nbsp;base&nbsp;introducida<br>
+usando&nbsp;la&nbsp;regla&nbsp;de&nbsp;Horner.<br>
+Devuelve&nbsp;un&nbsp;int.<br>
+Ej,&nbsp;la&nbsp;lista&nbsp;[4&nbsp;7&nbsp;6]&nbsp;nos&nbsp;da&nbsp;polinomio&nbsp;<br>
+f(x)&nbsp;=&nbsp;6x^2&nbsp;+&nbsp;7^x&nbsp;+&nbsp;4&nbsp;=&nbsp;x*(6x&nbsp;+&nbsp;7)&nbsp;+&nbsp;4;&nbsp;si&nbsp;x&nbsp;=&nbsp;10;&nbsp;f(x)&nbsp;=&nbsp;674<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+l_pol:&nbsp;polinomio&nbsp;a&nbsp;evaluar.<br>
+base:&nbsp;base&nbsp;deseada</tt></dd></dl>
+ <dl><dt><a name="-rand_numero"><strong>rand_numero</strong></a>(num_digits, base=10)</dt><dd><tt>Genera&nbsp;un&nbsp;int&nbsp;aleatorio&nbsp;de&nbsp;numero&nbsp;de&nbsp;digitos&nbsp;num_digits&nbsp;y&nbsp;base<br>
+la&nbsp;introducida&nbsp;como&nbsp;parámetro.&nbsp;Hace&nbsp;uso&nbsp;de&nbsp;las&nbsp;funciones&nbsp;pol_2_num&nbsp;y&nbsp;<br>
+rand_polinomio.<br>
+Devuelve&nbsp;el&nbsp;número&nbsp;generado.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+num_digits:&nbsp;numero&nbsp;de&nbsp;digitos<br>
+base:&nbsp;base&nbsp;deseada</tt></dd></dl>
+ <dl><dt><a name="-rand_polinomio"><strong>rand_polinomio</strong></a>(long=1024, base=10)</dt><dd><tt>Genera&nbsp;un&nbsp;polinomio&nbsp;aleatorio&nbsp;de&nbsp;longitud&nbsp;long&nbsp;cuyo&nbsp;grado&nbsp;es&nbsp;<br>
+long&nbsp;-&nbsp;1.&nbsp;Los&nbsp;coeficientes&nbsp;estan&nbsp;entre&nbsp;2&nbsp;&lt;=&nbsp;base&nbsp;&lt;=&nbsp;10.<br>
+Devuelve&nbsp;una&nbsp;lista&nbsp;de&nbsp;ints,&nbsp;cuyos&nbsp;grados&nbsp;van&nbsp;de&nbsp;menor&nbsp;a&nbsp;mayor.<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+long:&nbsp;longitud&nbsp;del&nbsp;polinomio.<br>
+base:&nbsp;base&nbsp;del&nbsp;polinomio,&nbsp;nos&nbsp;sirve&nbsp;para&nbsp;calcular&nbsp;los&nbsp;coeficientes</tt></dd></dl>
+ <dl><dt><a name="-time_mult_numeros"><strong>time_mult_numeros</strong></a>(n_pairs, num_digits_ini, num_digits_fin, step)</dt><dd><tt>Genera&nbsp;n_pairs&nbsp;parejas&nbsp;de&nbsp;numeros&nbsp;con&nbsp;num_digits_ini&nbsp;+&nbsp;step*k&nbsp;digitos<br>
+con&nbsp;un&nbsp;maximo&nbsp;de&nbsp;num_digits_fin&nbsp;de&nbsp;número&nbsp;de&nbsp;digitos&nbsp;y&nbsp;devuelve&nbsp;una<br>
+lista&nbsp;con&nbsp;el&nbsp;tiempo&nbsp;medio&nbsp;de&nbsp;sus&nbsp;multiplicaciones&nbsp;usando&nbsp;el&nbsp;algoritmo<br>
+mult_numeros<br>
+Retorna&nbsp;una&nbsp;lista&nbsp;con&nbsp;los&nbsp;tiempos&nbsp;medios&nbsp;de&nbsp;sus&nbsp;multiplicaciones<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+n_pairs:&nbsp;numero&nbsp;de&nbsp;parejas&nbsp;de&nbsp;números&nbsp;a&nbsp;generar<br>
+num_digits_ini:&nbsp;número&nbsp;de&nbsp;digitos&nbsp;iniciales<br>
+num_digits_fin:&nbsp;número&nbsp;de&nbsp;digitos&nbsp;máximos<br>
+step:&nbsp;numero&nbsp;fijo&nbsp;de&nbsp;digitos&nbsp;para&nbsp;el&nbsp;crecimiento&nbsp;del&nbsp;numero&nbsp;de&nbsp;digitos<br>
+de&nbsp;los&nbsp;numeros&nbsp;a&nbsp;multiplicar</tt></dd></dl>
+ <dl><dt><a name="-time_mult_numeros_fft"><strong>time_mult_numeros_fft</strong></a>(n_pairs, num_digits_ini, num_digits_fin, step, fft_func=&lt;function fft at 0x7f8bc629cea0&gt;)</dt><dd><tt>Genera&nbsp;n_pairs&nbsp;parejas&nbsp;de&nbsp;numeros&nbsp;con&nbsp;num_digits_ini&nbsp;+&nbsp;step*k&nbsp;digitos<br>
+con&nbsp;un&nbsp;maximo&nbsp;de&nbsp;num_digits_fin&nbsp;de&nbsp;número&nbsp;de&nbsp;digitos&nbsp;y&nbsp;devuelve&nbsp;una<br>
+lista&nbsp;con&nbsp;el&nbsp;tiempo&nbsp;medio&nbsp;de&nbsp;sus&nbsp;multiplicaciones&nbsp;usando&nbsp;el&nbsp;algoritmo<br>
+mult_numeros_fft<br>
+Retorna&nbsp;una&nbsp;lista&nbsp;con&nbsp;los&nbsp;tiempos&nbsp;medios&nbsp;de&nbsp;sus&nbsp;multiplicaciones<br>
+&nbsp;<br>
+Parámetros<br>
+----------<br>
+n_pairs:&nbsp;numero&nbsp;de&nbsp;parejas&nbsp;de&nbsp;números&nbsp;a&nbsp;generar<br>
+num_digits_ini:&nbsp;número&nbsp;de&nbsp;digitos&nbsp;iniciales<br>
+num_digits_fin:&nbsp;número&nbsp;de&nbsp;digitos&nbsp;máximos<br>
+step:&nbsp;numero&nbsp;fijo&nbsp;de&nbsp;digitos&nbsp;para&nbsp;el&nbsp;crecimiento&nbsp;del&nbsp;numero&nbsp;de&nbsp;digitos<br>
+de&nbsp;los&nbsp;numeros&nbsp;a&nbsp;multiplicar</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>pi</strong> = 3.141592653589793</td></tr></table>
+</body></html>
